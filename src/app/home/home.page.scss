@@ -274,3 +274,49 @@ ion-card:hover ion-card-title {
   color: #facc15;  /* amarillo Duoc */
   transition: color 0.3s;
 }
+
+/* Forzar siempre tema claro, aunque el navegador esté en dark mode */
+:root {
+  color-scheme: light !important; /* fuerza light */
+}
+
+html, body, ion-app, ion-content, .ion-page {
+  background: #fff !important; /* fondo blanco */
+  color: #111 !important;      /* texto oscuro */
+}
+
+/* Asegurar que secciones como .section no hereden fondo oscuro */
+.section {
+  background: #fff !important;
+}
+
+/* ——— Mantener TODO el sitio en modo claro ——— */
+:root { color-scheme: light !important; }
+
+html, body, ion-app, .ion-page, ion-content {
+  background: #fff !important;
+  color: #111 !important;
+}
+
+/* ——— Header/Toolbar SIEMPRE oscuro (para que el logo blanco se vea) ——— */
+ion-header, ion-toolbar.header-toolbar {
+  /* color de fondo y texto del toolbar */
+  --background: #000 !important;           /* o #0b2b45 si prefieres azul Duoc */
+  --ion-color-base: #000 !important;       /* compatibilidad Ionic */
+  --color: #fff !important;
+
+  background: #000 !important;             /* fallback */
+  color: #fff !important;
+}
+
+/* Links del menú en blanco sobre header oscuro */
+.nav-menu a {
+  color: #fff !important;
+}
+.nav-menu a:hover { color: #facc15 !important; }
+
+/* Botón de Admisión coherente sobre fondo oscuro */
+.btn-admision {
+  --background: #facc15 !important;
+  --color: #000 !important;
+}
