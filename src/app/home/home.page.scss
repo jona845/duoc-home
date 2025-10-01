@@ -1,0 +1,276 @@
+.border-bottom { border-bottom: 1px solid #e5e7eb; }
+.muted { color: #6b7280; }
+.mini { font-size: 13px; opacity: .8; }
+
+.header-toolbar {
+  --background: #000; /* fondo negro */
+  --color: #fff; /* texto blanco */
+  display: flex;
+  align-items: center;
+}
+
+.duoc-logo {
+  height: 35px;
+  margin-right: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  margin-left: 40px;
+  flex: 1;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+  color: #facc15; /* amarillo Duoc al pasar el mouse */
+}
+
+.btn-admision {
+  --background: #facc15;
+  --color: #000;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* capa oscura para legibilidad */
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2; /* texto encima de la imagen */
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-actions ion-button {
+  margin: 5px;
+}
+
+.section h2 {
+  font-size: 2rem;          /* más grande */
+  font-weight: 800;         /* más fuerte */
+  text-align: center;       /* centrado */
+  color: #0a2e5c;           /* azul institucional Duoc */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* opcional: todo mayúscula */
+  letter-spacing: 1px;       /* espaciado entre letras */
+  position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #facc15;  /* amarillo Duoc */
+  margin: 10px auto 0;  /* centrado */
+  border-radius: 2px;
+}
+
+.lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===== Footer Duoc ===== */
+.footer-duoc {
+  background: #151515;           /* negro suave */
+  color: #fff;
+  position: relative;
+  padding: 14px 16px;
+}
+
+.footer-line {
+  height: 2px;
+  background: #e5e7eb;          /* línea superior gris clara */
+  opacity: .7;
+  margin: 0 10px 12px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 38px;
+  width: auto;
+}
+
+.footer-spacer {
+  flex: 1;                       /* empuja la banda de acreditación a la derecha */
+}
+
+.footer-acreditacion {
+  height: 44px;                  /* ajusta si tu imagen es más alta/baja */
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* si tu banner es oscuro, quita esta línea */
+}
+
+/* Botón flotante de accesibilidad (opcional) */
+.footer-accessibility {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #ffcc00;          /* amarillo Duoc */
+  color: #111;
+  font-size: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .footer-acreditacion {
+    height: 36px;
+  }
+}
+
+
+.footer h3 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--duoc-yellow);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--duoc-yellow);
+}
+
+
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-media { margin-top: 20px; }
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+ion-card img,
+ion-card ion-img {
+  width: 100%;
+  height: 280px;        /* <-- más grande (puedes probar 250, 280 o 300px) */
+  object-fit: cover;    /* mantiene proporción, recorta lo sobrante */
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+
+ion-card-content {
+  flex-grow: 1;
+}
+
+
+
+ion-card-content {
+  color: #444;
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Imagen de las sedes */
+.sede-img {
+  width: 100%;
+  height: 150px;       /* <- asegúrate que tenga altura */
+  object-fit: cover;   /* recorte bonito sin deformar */
+  border-radius: 12px 12px 0 0; /* esquinas redondeadas arriba */
+  display: block;
+}
+
+ion-card {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+
+ion-card-title {
+  font-size: 1.3rem;         /* más grande */
+  font-weight: 700;          /* negrita fuerte */
+  text-align: center;        /* centrado */
+  color: #0a2e5c;            /* azul Duoc */
+  margin-top: 8px;
+}
+
+#carreras ion-card-title {
+  color: #0a2e5c;  /* azul */
+  font-size: 1.4rem;
+}
+
+#sedes ion-card-title {
+  color: #003366;  /* un azul más oscuro */
+  font-size: 1.2rem;
+}
+
+ion-card:hover ion-card-title {
+  color: #facc15;  /* amarillo Duoc */
+  transition: color 0.3s;
+}

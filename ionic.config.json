@@ -1,0 +1,7 @@
+{
+  "name": "duoc-home",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

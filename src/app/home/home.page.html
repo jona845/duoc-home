@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar color="dark" class="header-toolbar">
+    <ion-buttons slot="start">
+      <!-- Logo Duoc -->
+      <img src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" alt="Duoc UC" class="duoc-logo">
+    </ion-buttons>
+
+    <!-- Menú principal -->
+    <div class="nav-menu">
+      <a href="#">Oferta Académica</a>
+      <a href="#">Vida Estudiantil</a>
+      <a href="#">Extensión</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Carreras Online</a>
+    </div>
+
+    <!-- Botón destacado -->
+    <ion-buttons slot="end">
+      <ion-button class="btn-admision">Admisión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+  <!-- Hero -->
+  <section class="hero">
+  <img class="hero-bg" src="https://www.duoc.cl/wp-content/uploads/2025/09/admision2026.jpg" alt="Estudiantes Duoc">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <ion-badge color="light" class="pill">Instituto Profesional acreditado</ion-badge>
+      <h1>Formación práctica, tecnología y vínculos con la industria</h1>
+      <p>Estudia carreras técnicas y profesionales con foco en empleabilidad e innovación.</p>
+      <div class="hero-actions">
+        <ion-button color="warning" size="large">
+          <ion-icon name="rocket-outline" slot="start"></ion-icon>
+          Postula hoy
+        </ion-button>
+        <ion-button fill="outline" color="light" size="large">
+          <ion-icon name="grid-outline" slot="start"></ion-icon>
+          Ver carreras
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Carreras -->
+<section class="section ion-padding" id="carreras">
+  <h2>Carreras Técnicas y Profesionales</h2>
+  <ion-grid>
+    <ion-row>
+      <!-- Analista Programador -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="lift">
+          <ion-img src="https://blogs.uoc.edu/informatica/wp-content/uploads/sites/153/2017/03/cx-picture-100608993-primary-idge_.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Analista Programador</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Desarrollo de software, bases de datos y proyectos reales.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Técnico en Gastronomía -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="lift">
+          <ion-img src="https://blog-u-erre.talisis.com/hubfs/concepto-de-gastronomia.webp"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Técnico en Gastronomía</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Técnicas culinarias modernas y gestión de cocina.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Técnico en Enfermería -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="lift">
+          <ion-img src="https://www.excelsior.edu/wp-content/uploads/2022/02/different-types-of-nurses.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Técnico en Enfermería</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Atención integral y prácticas clínicas.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>
+
+
+  <!-- Sedes -->
+  <section class="section ion-padding" id="sedes">
+  <h2>Nuestras Sedes</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="3" *ngFor="let sede of sedes">
+        <ion-card class="lift h-100">
+          <!-- Imagen de la sede -->
+          <img class="sede-img" [src]="sede.img" [alt]="sede.nombre" />
+          
+          <ion-card-header>
+            <ion-card-title>{{ sede.nombre }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ sede.desc }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</section>
+
+
+<!-- Footer estilo Duoc -->
+<footer class="footer-duoc">
+  <div class="footer-line"></div>
+
+  <div class="footer-inner">
+    <img class="footer-logo" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" alt="Duoc UC" />
+
+    <div class="footer-spacer"></div>
+
+    <img class="footer-acreditacion"
+         src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png"
+         alt="7 años acreditado - Nivel de Excelencia" />
+  </div>
+
+  <!-- botón accesibilidad opcional -->
+  <button class="footer-accessibility" aria-label="Accesibilidad">♿</button>
+</footer>
+

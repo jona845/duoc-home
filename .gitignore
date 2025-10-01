@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Ionic/Angular builds
+www/
+dist/
+build/
+
+# Configuración IDE
+.vscode/
+.idea/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+desktop.ini
