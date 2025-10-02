@@ -1,0 +1,138 @@
+/* El :host se asegura que los estilos se apliquen al componente y su contenido */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; /* Previene que el contenido se salga de los bordes redondeados */
+}
+
+ion-header {
+  /* Hereda el borde redondeado de la clase global .chat-modal */
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+ion-header ion-toolbar {
+  --background: #0a2e5c; /* Azul institucional Duoc */
+  --color: #fff;
+}
+
+ion-content {
+  /* Añade un efecto de scroll suave */
+  scroll-behavior: smooth;
+}
+
+ion-footer {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+ion-footer ion-toolbar {
+  --background: #f4f5f8;
+  padding: 4px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 20px; /* Bordes más redondeados y uniformes */
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message-bubble p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Mensajes del Bot */
+.bot-message {
+  justify-content: flex-start;
+}
+
+.bot-message .message-bubble {
+  background: #e5e7eb; /* Gris claro */
+  color: #111;
+  border-bottom-left-radius: 5px; /* Un pequeño "pico" para indicar dirección */
+}
+
+/* Mensajes del Usuario */
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-bubble {
+  background: #facc15; /* Amarillo Duoc */
+  color: #000;
+  border-bottom-right-radius: 5px; /* Un pequeño "pico" para indicar dirección */
+}
+
+/* Input de texto (solución con Div Editable) */
+.chat-input-toolbar {
+  --background: #f4f5f8;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #dde1e7;
+  border-radius: 15px;
+  color: #111;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 45px;
+  padding: 10px 10px;
+  overflow-y: auto; /* Habilita el scroll */
+
+  /* Oculta la barra de scroll de forma definitiva */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Estilo para el placeholder del div editable */
+.chat-input:empty::before {
+  content: attr(data-placeholder);
+  color: #9ca3af; /* Color gris para el placeholder */
+  pointer-events: none;
+}
+
+/* Indicador de foco */
+.chat-input:focus {
+  outline: none; /* Quita el outline por defecto del navegador */
+  border-color: #facc15;
+  box-shadow: 0 0 8px 1px rgba(207, 206, 202, 0.7) !important;
+}
+
+.send-button-wrapper {
+  margin-left: 8px;
+}
+
+.send-button {
+  flex-shrink: 0;
+  --background: #0a2e5c;
+  --color: #fff;
+  --border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}

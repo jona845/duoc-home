@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Asistente Virtual</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="chat-container">
+    <!-- Mensajes de ejemplo -->
+    <div *ngFor="let message of messages" class="message-wrapper" [ngClass]="{ 'user-message': message.isUser, 'bot-message': !message.isUser }">
+      <div class="message-bubble">
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="chat-input-toolbar">
+    <div
+      #chatInput
+      contenteditable="true"
+      class="chat-input"
+      data-placeholder="Escribe un mensaje..."
+      (input)="onInput($event)"
+      (keydown.enter)="sendMessage(); $event.preventDefault();">
+    </div>
+    <ion-buttons slot="end" class="send-button-wrapper">
+      <ion-button (click)="sendMessage()" class="send-button" [disabled]="!newMessage || newMessage.trim() === ''">
+        <ion-icon name="send-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

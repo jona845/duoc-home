@@ -1,0 +1,59 @@
+.header-toolbar {
+  --background: #000; /* fondo negro */
+  --color: #fff; /* texto blanco */
+  display: flex;
+  align-items: center;
+}
+
+.duoc-logo {
+  height: 35px;
+  margin-right: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  margin-left: 40px;
+  flex: 1;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+  color: #facc15; /* amarillo Duoc al pasar el mouse */
+}
+
+.btn-admision {
+  --background: #facc15;
+  --color: #000;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+/* ——— Header/Toolbar SIEMPRE oscuro (para que el logo blanco se vea) ——— */
+ion-header, ion-toolbar.header-toolbar {
+  /* color de fondo y texto del toolbar */
+  --background: #000 !important;           /* o #0b2b45 si prefieres azul Duoc */
+  --ion-color-base: #000 !important;       /* compatibilidad Ionic */
+  --color: #fff !important;
+
+  background: #000 !important;             /* fallback */
+  color: #fff !important;
+}
+
+/* Links del menú en blanco sobre header oscuro */
+.nav-menu a {
+  color: #fff !important;
+}
+.nav-menu a:hover { color: #facc15 !important; }
+
+/* Botón de Admisión coherente sobre fondo oscuro */
+.btn-admision {
+  --background: #facc15 !important;
+  --color: #000 !important;
+}

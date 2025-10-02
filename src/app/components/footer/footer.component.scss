@@ -1,0 +1,79 @@
+/* ===== Footer Duoc ===== */
+.footer-duoc {
+  background: #151515;           /* negro suave */
+  color: #fff;
+  position: relative;
+  padding: 14px 16px;
+}
+
+.footer-line {
+  height: 2px;
+  background: #e5e7eb;          /* línea superior gris clara */
+  opacity: .7;
+  margin: 0 10px 12px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 38px;
+  width: auto;
+}
+
+.footer-spacer {
+  flex: 1;                       /* empuja la banda de acreditación a la derecha */
+}
+
+.footer-acreditacion {
+  height: 44px;                  /* ajusta si tu imagen es más alta/baja */
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* si tu banner es oscuro, quita esta línea */
+}
+
+/* Botón flotante de accesibilidad (opcional) */
+.footer-accessibility {
+  position: fixed;
+  right: 18px;
+  bottom: 70px; /* Elevado para dejar espacio al botón del chatbot debajo */
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #ffcc00;          /* amarillo Duoc */
+  color: #111;
+  font-size: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .footer-acreditacion {
+    height: 36px;
+  }
+}
+
+
+.footer h3 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--duoc-yellow);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--duoc-yellow);
+}

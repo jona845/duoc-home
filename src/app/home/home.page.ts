@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from '../components/footer/footer.component';
+import { HeaderComponent } from '../components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule, HeaderComponent, FooterComponent],
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
